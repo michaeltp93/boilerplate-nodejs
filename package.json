@@ -1,0 +1,27 @@
+{
+	"name": "boilerplate-nodejs",
+	"version": "1.0.0",
+	"main": "server.js",
+	"author": "michaeltp93 <michael.trejosp@hotmail.es>",
+	"license": "MIT",
+	"scripts": {
+		"format:check": "prettier --check src/**/*.ts",
+		"format:fix": "prettier --write src/**/*.ts",
+		"lint": "eslint --ext .ts src/",
+		"lint:fix": "eslint --ext .ts --fix src/",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^12.1.4",
+		"@commitlint/config-conventional": "^12.1.4",
+		"@typescript-eslint/eslint-plugin": "^4.28.3",
+		"@typescript-eslint/parser": "^4.28.3",
+		"editorconfig": "^0.15.3",
+		"eslint": "^7.30.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"husky": "^7.0.1",
+		"prettier": "^2.3.2",
+		"typescript": "^4.3.5"
+	}
+}
