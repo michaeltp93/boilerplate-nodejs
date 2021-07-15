@@ -9,19 +9,42 @@
 		"format:fix": "prettier --write src/**/*.ts",
 		"lint": "eslint --ext .ts src/",
 		"lint:fix": "eslint --ext .ts --fix src/",
-		"prepare": "husky install"
+		"clean": "rimraf ./dist",
+		"prepare": "husky install",
+		"tsc": "tsc --project tsconfig.json",
+		"update-imports": "tsc-alias",
+		"build": "yarn clean && yarn tsc && yarn update-imports",
+		"dev": "tsc-watch --onSuccess \"yarn start\"",
+		"start": "node ./dist/server.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"rimraf": "^3.0.2",
+		"tsc-alias": "^1.3.7",
+		"winston": "^3.3.3",
+		"winston-transport": "^4.4.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",
 		"@commitlint/config-conventional": "^12.1.4",
+		"@types/cors": "^2.8.12",
+		"@types/express": "^4.17.13",
+		"@types/module-alias": "^2.0.1",
+		"@types/node": "^16.3.2",
+		"@types/rimraf": "^3.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.28.3",
 		"@typescript-eslint/parser": "^4.28.3",
+		"dotenv": "^10.0.0",
 		"editorconfig": "^0.15.3",
 		"eslint": "^7.30.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^3.4.0",
 		"husky": "^7.0.1",
 		"prettier": "^2.3.2",
+		"reflect-metadata": "^0.1.13",
+		"ts-node": "^10.1.0",
+		"tsc-watch": "^4.4.0",
 		"typescript": "^4.3.5"
 	}
 }
