@@ -4,6 +4,7 @@
 		"module": "CommonJS",
 		"lib": ["es2020", "DOM"],
 		"types": ["node", "reflect-metadata"],
+		"typeRoots": ["./node_modules/@types", "./src/@types"],
 		"rootDir": "./src",
 		"skipLibCheck": true,
 		"sourceMap": true,

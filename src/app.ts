@@ -2,11 +2,14 @@ import express, { Application, json, urlencoded } from 'express';
 import cors from 'cors';
 
 import './alias-modules';
+import { AppLogger } from './infra/logger';
 
 class App {
 	private _app: Application;
 
 	constructor() {
+		// Start the Application Logger
+		AppLogger.configureLogger();
 		// Configure Express Server - Middlewares
 		this._app = express();
 		this._app.use(json({ limit: '50mb' }));
