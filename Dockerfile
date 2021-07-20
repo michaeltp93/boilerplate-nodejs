@@ -2,7 +2,6 @@ FROM node:14
 WORKDIR /app
 COPY package.json .
 RUN yarn install
-RUN yarn add -D @types/sap__xsenv
 
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "development" ]; \

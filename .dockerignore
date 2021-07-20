@@ -1,4 +1,7 @@
-node_modules
-Dockerfile
-.dockerignore
-docker-compose*
+**/node_modules/**
+**/Dockerfile/**
+**/.dockerignore/**
+**/docker-compose*/**
+**/.git/**
+**/.husky/**
+**/.gitignore/**

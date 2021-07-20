@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 import xsenv from '@sap/xsenv';
-import querystring from 'querystring';
+import queryString from 'query-string';
 import btoa from 'btoa';
 
 export class SCPDestinations {
@@ -16,7 +16,7 @@ export class SCPDestinations {
 			const { data } = await axios.post(
 				`${dest.url}/oauth/token`,
 
-				querystring.stringify({
+				queryString.stringify({
 					client_id: dest.clientid,
 					grant_type: 'client_credentials'
 				}),
